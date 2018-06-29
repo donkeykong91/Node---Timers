@@ -5,7 +5,7 @@ var waitInterval = 500;
 function writeWaitingPercent(p) {
   process.stdout.clearLine();
   process.stdout.cursorTo(0);
-  process.stdout.write(`waiting... ${p}`);
+  process.stdout.write(`waiting... ${p}%`);
 }
 
 var interval = setInterval(function () {
@@ -17,5 +17,5 @@ var interval = setInterval(function () {
 setTimeout(function () {
   clearInterval(interval);
   writeWaitingPercent(100);
-  console.log("done");
+  console.log("\n\ndone\n\n");
 }, waitTime);
